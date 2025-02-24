@@ -45,11 +45,6 @@ $password = '';
 ```
 
 
-#### Start the Server:
-2. Open your browser and go to:
-```
-http://localhost/fitness-tracker
-```
 
 
 
