@@ -7,11 +7,11 @@ from getpass import getpass
 warnings.filterwarnings("ignore", category=Warning)
 
 def hash_password(password):
-    """Hash a password using SHA-256."""
+ 
     return hashlib.sha256(password.encode()).hexdigest()
 
 def initialize_database():
-    """Initialize the database and create tables if they don't exist."""
+   
     conn = sqlite3.connect("fitness_tracker.db")
     cursor = conn.cursor()
 
@@ -95,7 +95,7 @@ class FitnessTracker:
         self.current_user_id = None
 
     def register(self, username, password, age, weight, height, fitness_goals):
-        """Register a new user."""
+       
         try:
             hashed_password = hash_password(password)
             self.cursor.execute('''
@@ -112,7 +112,7 @@ class FitnessTracker:
             return False
 
     def login(self, username, password):
-        """Log in an existing user."""
+    
         try:
             hashed_password = hash_password(password)
             self.cursor.execute('''
@@ -297,7 +297,7 @@ class FitnessTracker:
     def close(self):
         self.conn.close()
 
-# Console-Based UI
+
 class FitnessTrackerConsole:
     def __init__(self):
         self.tracker = FitnessTracker()
@@ -386,23 +386,23 @@ class FitnessTrackerConsole:
         print("\n--- Track Activity ---")
         activity_type = input("Enter activity type (e.g., running, walking, cycling): ")
 
-        # Timer functionality
+     
         print("\nStarting timer... Press Enter to stop.")
         input("Press Enter to start the timer.")
         start_time = time.time()
         input("Press Enter to stop the timer.")
         end_time = time.time()
-        duration = (end_time - start_time) / 60  # Convert to minutes
+        duration = (end_time - start_time) / 60 s
         print(f"Activity duration: {duration:.2f} minutes")
 
-        # Calculate calories based on activity type and duration
+      
         weight = self.tracker.cursor.execute('SELECT weight FROM users WHERE id = ?', (self.tracker.current_user_id,)).fetchone()[0]
         if activity_type.lower() == "running":
-            calories = 10 * weight * (duration / 60)  # 10 calories per kg per hour
+            calories = 10 * weight * (duration / 60)  
         elif activity_type.lower() == "cycling":
-            calories = 8 * weight * (duration / 60)  # 8 calories per kg per hour
+            calories = 8 * weight * (duration / 60) 
         elif activity_type.lower() == "walking":
-            calories = 5 * weight * (duration / 60)  # 5 calories per kg per hour
+            calories = 5 * weight * (duration / 60)  
         else:
             calories = 0
 
@@ -501,7 +501,6 @@ class FitnessTrackerConsole:
             else:
                 print("Invalid choice. Please try again.")
 
-# Run the Application
 if __name__ == "__main__":
     initialize_database()
     app = FitnessTrackerConsole()
