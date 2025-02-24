@@ -21,8 +21,6 @@ The **Fitness Tracker** is a web application designed to help users track their 
 ### View Activities:
 - View all logged activities with details.
 
-### Responsive UI:
-- Modern and attractive design using Bootstrap.
 
 ## Technologies Used
 ### Frontend:
