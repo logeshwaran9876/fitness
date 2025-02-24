@@ -23,32 +23,15 @@ The **Fitness Tracker** is a web application designed to help users track their 
 
 
 ## Technologies Used
-### Frontend:
-- HTML, CSS, JavaScript
-- Bootstrap (for styling and responsiveness)
 
 ### Backend:
-- PHP (for server-side logic)
+- Python
 - MySQL (for database management)
 
-### Tools:
-- XAMPP (for local development)
 
-## Installation and Setup
-### Prerequisites
-- XAMPP (or any local server environment).
-- Web Browser (Chrome, Firefox, etc.).
-- MySQL Database.
-
-### Steps to Run the Application
-#### Clone the Repository:
-```bash
-git clone https://github.com/your-username/fitness-tracker.git
-cd fitness-tracker
-```
 
 #### Set Up the Database:
-1. Open **phpMyAdmin** in XAMPP.
+
 2. Create a new database named `fitness_tracker`.
 3. Import the SQL file (`fitness_tracker.sql`) to create the required tables.
 
@@ -61,42 +44,14 @@ $username = 'root';
 $password = '';
 ```
 
-#### Move the Project to XAMPP:
-Copy the `fitness-tracker` folder to the `htdocs` directory in XAMPP.
 
 #### Start the Server:
-1. Launch **XAMPP** and start **Apache** and **MySQL**.
 2. Open your browser and go to:
 ```
 http://localhost/fitness-tracker
 ```
 
-## Folder Structure
-```
-fitness-tracker/
-│
-├── index.php              # Homepage (Login/Register)
-├── register.php           # User registration
-├── login.php              # User login
-├── dashboard.php          # User dashboard
-├── track_activity.php     # Track activity page
-├── create_workout.php     # Create workout plan
-├── set_goal.php           # Set fitness goal
-├── view_activities.php    # View activities
-├── logout.php             # Logout
-│
-├── css/
-│   └── styles.css         # Custom CSS
-│
-├── includes/
-│   ├── db.php             # Database connection
-│   ├── auth.php           # Authentication functions
-│   └── functions.php      # Utility functions
-│
-└── assets/                # Bootstrap and other assets
-    ├── bootstrap/
-    └── images/
-```
+
 
 ## Usage
 ### Register:
